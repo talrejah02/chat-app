@@ -6,7 +6,8 @@ body {
   align-items: center ;
 }
 #root{
-  padding: 1rem;
+  width: 100vw;
+  overflow: hidden;
 }
 
 code {

@@ -1,11 +1,7 @@
-.chat-view{
+.Container{
     height: 100%;
-    width: 40%;
-  border: 1px solid black;
-}
-.msg-div{
-    height: 100vh;
-    border: 1px solid black;
     width: 100%;
+    display: flex;
+    flex-direction: row;
     
 }

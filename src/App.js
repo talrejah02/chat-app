@@ -11,6 +11,7 @@ function App() {
   const [user] = useAuthState(auth)
   return (
     <div className="App">
+      
       {user? <ChatView/> : <Login/>}
 
     </div>
