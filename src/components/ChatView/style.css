@@ -1,0 +1,11 @@
+.chat-view{
+    height: 100%;
+    width: 40%;
+  border: 1px solid black;
+}
+.msg-div{
+    height: 100vh;
+    border: 1px solid black;
+    width: 100%;
+    
+}
