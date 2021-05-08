@@ -5,7 +5,8 @@ import Chats from '../sidebar/Chats';
 import Chatbox from '../ChatBox/Chatbox';
 
 function ChatView() {
- 
+  
+    
     
 
 

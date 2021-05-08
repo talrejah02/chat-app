@@ -1,15 +1,41 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import Online from '../Active/Online'
+import {firestore} from '../../firebase'
 import './style.css'
+import {Card} from './Card/Card'
+import {useGroups} from '../../context/groups'
+
 
 
 function Chats() {
+   const [Chats , setChats]=useState([])
+   const {groups}=useGroups()
+   
+  useEffect( async() => {
+     const allChats = await firestore.collection('group').get();
+     allChats.docs.map(item =>!Chats.find(element=>element.id === item.id) && setChats( (group)=>[...group,{...item.data(),id: item.id}] ) )
+    },[])
+     
+    
+
+
+
+
+     
+    
+
     return (
         <div className="chat-list">
-            <h2>Chats</h2>
-           <Online/>
-           <div>
-               card
+           <p className="Chats-head">Chats</p>
+           {/* <Online/> */}
+           <div className="cards-container">
+
+          
+
+          
+              {Chats.map(element => <Card element={element} />)}
+          
+          
            </div>
             
         </div>

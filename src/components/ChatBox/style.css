@@ -1,7 +1,8 @@
 .chat-view{
     height: 100%;
     width: 70%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  background-color: #262E35;
 }
 .msg-div{
   display: flex;
@@ -15,6 +16,7 @@
 .msg{
   display: flex;
   justify-content: flex-end;
+  
 }
 .msg-input{
  height: 2.2rem;
