@@ -63,7 +63,7 @@ function Chatbox() {
                        </div>)
                      }
                     return (<div className="rmsg-container">
-                    <img className="photo" src={photourl}></img>
+                    <img className="photo" src={msg.data().photoURL}></img>
                    <div className="msg" key={msg.id} > 
                          {msg.data().text}
                    </div>

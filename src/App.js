@@ -7,6 +7,7 @@ import Login from './components/login/Login';
 import {auth} from './firebase'
 
 function App() {
+  console.log(auth)
   
   const [user] = useAuthState(auth)
   return (

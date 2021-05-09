@@ -10,6 +10,7 @@ function signIn() {
    const provider = new firebase.auth.GoogleAuthProvider();
    auth.signInWithPopup(provider);
 }
+
     return (
         <div className="login">
             <h1>Babble Up</h1>
