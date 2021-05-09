@@ -45,32 +45,38 @@ function Chatbox() {
     return (
         <div className="chat-view">
             <div className="group-title"> 
-             <img className="group-pic" src={url}/>
-             <h2>{groups.title}</h2>
+            { groups.id &&  <img className="group-pic" src={url}/> }
+             <p>{groups.title}</p>
              
              </div>
              {/* <hr/> */}
 
             <div className="msg-div">
                 {msg&& msg.map(msg => {
-                    return(
-                     
+        
+                     {if(curentid === msg.data().sentBy){
+                return (<div className="msg-container">
+                       <div className="msg" key={msg.id} > 
+                             {msg.data().text}
+                       </div>
+                        <img className="photo" src={photourl}></img>
+                       </div>)
+                     }
+                    return (<div className="rmsg-container">
+                    <img className="photo" src={photourl}></img>
+                   <div className="msg" key={msg.id} > 
+                         {msg.data().text}
+                   </div>
+                   </div>)}
                         
-                        <div className={curentid === msg.data().sentBy ? "msg-container" : "rmsg-container"}>
-                         <img className="photo" src={photourl}></img>
-                        <div className="msg" key={msg.id} > 
-                              {msg.data().text}
-                        </div>
-                        </div>
-
-                        );
+                    
                         
                     }
                     )}
             </div>
             {/* <hr/> */}
             <div className="msg-input">
-            <input type="text" value={formvalue} onChange={inputchange} placeholder="Type something peaceful"/>
+              <input type="text" value={formvalue} onChange={inputchange} placeholder="Type something peaceful"/>
                 
                 <button className="attach-btn"><svg width="1.5rem" height="1.5rem" viewBox="0 0 512 512"><path d="M208 64h66.75a32 32 0 0 1 22.62 9.37l141.26 141.26a32 32 0 0 1 9.37 22.62V432a48 48 0 0 1-48 48H192a48 48 0 0 1-48-48V304" fill="none" stroke="#7269EF" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"></path><path d="M288 72v120a32 32 0 0 0 32 32h120" fill="none" stroke="#7269EF" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"></path><path d="M160 80v152a23.69 23.69 0 0 1-24 24c-12 0-24-9.1-24-24V88c0-30.59 16.57-56 48-56s48 24.8 48 55.38v138.75c0 43-27.82 77.87-72 77.87s-72-34.86-72-77.87V144" fill="none" stroke="#7269EF" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32"></path></svg></button>
 

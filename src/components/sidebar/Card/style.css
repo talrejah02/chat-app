@@ -1,6 +1,6 @@
 .card{
     height:4rem;
-    width:90%;
+    width:80%;
     color:#E1E9F1;
     display: flex;
     background-color:#45525F;
@@ -8,6 +8,7 @@
     align-items: center;
     margin:1rem;
     border-radius: 10px;
+    padding: 0 1rem;
 }
 
 .group-photo{
