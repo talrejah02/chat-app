@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import Online from '../Active/Online'
+// import Online from '../Active/Online'
 import {firestore} from '../../firebase'
 import './style.css'
 import {Card} from './Card/Card'
@@ -9,7 +9,7 @@ import {useGroups} from '../../context/groups'
 
 function Chats() {
    const [Chats , setChats]=useState([])
-   const {groups}=useGroups()
+   // const {groups}=useGroups()
    
   useEffect( async() => {
      const allChats = await firestore.collection('group').get();

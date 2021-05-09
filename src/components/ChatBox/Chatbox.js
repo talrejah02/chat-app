@@ -54,13 +54,13 @@ function Chatbox() {
             <div className="msg-div">
                 {msg&& msg.map(msg => {
                     return(
-
+                     
+                        
                         <div className={curentid === msg.data().sentBy ? "msg-container" : "rmsg-container"}>
-                             
-                               <img className="photo" src={photourl}></img>
-                            <div className="msg" key={msg.id} > 
+                         <img className="photo" src={photourl}></img>
+                        <div className="msg" key={msg.id} > 
                               {msg.data().text}
-                              </div>
+                        </div>
                         </div>
 
                         );
