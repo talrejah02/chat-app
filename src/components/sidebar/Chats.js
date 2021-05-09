@@ -29,10 +29,12 @@ function Chats() {
            <p className="Chats-head">Chats</p>
            {/* <Online/> */}
            <div className="cards-container">
+           <p className="recent"> Recent</p>
 
           
 
           
+              
               {Chats.map(element => <Card element={element} />)}
           
           
