@@ -63,3 +63,13 @@ li{
 li :hover svg{
     fill:#5146EC;
 }
+.create{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.create-input{
+    margin:0;
+    width:40%;
+    height:2rem;
+}
